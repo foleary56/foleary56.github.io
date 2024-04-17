@@ -1,4 +1,4 @@
-/* 	Developer: Max Coller 
+/* 	Developer: Max Coller and Finn O'Leary
 	Start Date:  04/23/2023 */
 	
 /* set the height of the body and html to 100%*/
@@ -16,7 +16,7 @@ html, body {
   
   /* set the default size, spacing and color of the header */
 header {
-    width: 105%;
+    width: 100%;
     margin: 0px -10px 0px -10px;
     background-color: rgb(240,248,255);
 }	
@@ -77,29 +77,6 @@ header h1 {
     text-align: right;
 }
 
-  
-  /* style the nav section for all displays */
-  /*
-  nav {
-      width: 200px;
-      float: left;
-  }
-      
-  /* style the unordered list that is used for the menu in all displays 
-  nav ul {
-      line-height: 2em;
-      list-style-type: none;
-      padding-left: 0px;
-      text-indent: 5px; 
-      border-radius: 5px;  
-  }
-  
-  /* style the list items that make up the menu in all displays 
-  nav ul li {
-      background-color: rgb(175,175,175);
-      border-radius: 5px;
-  }
-  
   /* style the links inside the nav section in all displays */
   nav a {
       color: rgb(255,255,0);
@@ -223,32 +200,6 @@ img.four-square {
       margin:0px -10px 20px -10px;
   }
   
-  /* styles for the products table */ 
-  section table{ 
-      border: 2px solid black; 
-      border-collapse: collapse;
-      width:80%;
-  } 
-  
-  /* add a border to the cells in the products table */
-  section table td,th{ 
-      border: 1px solid rgb(175,175,175); 
-  }
-  
-  /* make every other row a different color in the products table */
-  section table tr:nth-child(even) { 
-      background-color: rgb(240,248,255); 
-  } 
-  
-  /* make the column containing the prices a different color */
-  section table col.price { 
-      background-color: rgb(255,255,224); 
-  }
-  
-  /* add the hover pseudoclass to the rows when they are hovered over */
-  section table tr:hover {
-      background-color: rgb(176,224,230);
-  } 
   
   /* modify the section and products table in it for all displays smaller than full screen */
   @media print, screen and (max-width: 768px) {
@@ -279,14 +230,7 @@ img.four-square {
   section div p.bolder{
       font-weight:bold;
   }
-  /*section div.about_us {
-      margin: 5px, auto 5px auto;
-      border: 1px solid rgb(175,175,175);
-      padding: 10px; 
-      background-color: rgb(240,248,255);
-      border-radius:15px;
-      max-width:600px;
-  }*/
+
 
 .container {
     display: grid;
@@ -351,4 +295,62 @@ img {
 .textAbout {
     padding-left: 30px;
     font-size: 18px;
+}
+
+
+
+
+form {
+    width: 60%;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    border-radius: 20px;
+}
+
+legend {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],input[type="email"],input[type="tel"],textarea {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    font-family: Garamond;
+    font-size: 1.2em;
+}
+
+input[type="radio"] {
+    display: inline-block;
+}
+
+label[for="yes_subscribe"], label[for="no_subscribe"], label[for="f_name"], 
+label[for="l_name"], label[for="email"], label[for="tel"]{
+    display: inline-block;
+    margin-right: 25px;
+    font-family: Garamond;
+    font-size: 1.2em;
+}
+
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+input[type="submit"]:hover {
+    background-color: #36833a;
 }
