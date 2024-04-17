@@ -1,0 +1,354 @@
+/* 	Developer: Max Coller 
+	Start Date:  04/23/2023 */
+	
+/* set the height of the body and html to 100%*/
+html, body {
+    height: 100%;
+    width: 100%;
+  }
+  
+  /* for all displays larger than mobile, and print, hide the hamburger */
+  @media print, screen and (min-width: 480px) {
+      .menu-burger, .menu-chkbx, .hamburger {
+      display:none;
+      }
+  }
+  
+  /* set the default size, spacing and color of the header */
+header {
+    width: 105%;
+    margin: 0px -10px 0px -10px;
+    background-color: rgb(240,248,255);
+}	
+  
+  /* create the branding style for the h1 inside the header */
+header h1 {
+    font-family: Garamond;
+    text-align: right;
+    margin-right: 100px;
+}
+
+
+.navbar {
+    display: flex;
+    position: sticky;
+    align-items: center;
+    justify-content: space-between;
+    top: 0px;
+    background: rgba(111, 113, 222, 0.6);
+    background-blend-mode: darken;
+    background-size: cover;
+    color: white;
+    padding: 10px 20px;
+}
+.custom {
+    font-family: Garamond, serif;
+    font-size: 16px;
+    font-style: italic;
+    text-align: center;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-list li {
+    margin-right: 20px;
+}
+
+.nav-list li:last-child {
+    margin-right: 0;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-list li a:hover {
+    color: #ffd700;
+    /* Change the color on hover */
+}
+
+.rightNav {
+    text-align: right;
+}
+
+  
+  /* style the nav section for all displays */
+  /*
+  nav {
+      width: 200px;
+      float: left;
+  }
+      
+  /* style the unordered list that is used for the menu in all displays 
+  nav ul {
+      line-height: 2em;
+      list-style-type: none;
+      padding-left: 0px;
+      text-indent: 5px; 
+      border-radius: 5px;  
+  }
+  
+  /* style the list items that make up the menu in all displays 
+  nav ul li {
+      background-color: rgb(175,175,175);
+      border-radius: 5px;
+  }
+  
+  /* style the links inside the nav section in all displays */
+  nav a {
+      color: rgb(255,255,0);
+      font-weight:bold;
+      text-decoration: none;
+  }
+  
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  max-width: 80%;
+  padding: 0px;
+  border: 3px solid rgba(127, 123, 123, 0.8);
+  border-radius: 20px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(127, 123, 123, 0.8);
+  padding: 10px;
+  margin-left: 20px;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 20px;
+  width: auto;
+  max-width: 50%;
+  min-width: 50%;
+  max-height: fit-content;
+}
+.grid-image {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 0px;
+    display: flex;
+    width: auto;
+    max-width: 30%;
+    min-width: 100px;
+}
+
+.grid-image img.two-square {
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    margin: 5px;
+    border-style: solid;
+    border-color: rgb(175, 175, 175) rgb(200, 200, 200);
+    background-color: black;
+    border-radius: 20px;
+}
+  /* create the display grid for the four tiled images on the home page in all displays */
+  .image-grid {
+      width: 80%;
+      margin: 0 auto;
+      justify-content: center;
+        align-items: center;
+        display: grid; 
+      grid-template-areas: 
+         "img-top-l  	img-top-r" 
+         "img-bot-l	img-bot-r"; 
+  }
+  
+  /* assign the top left class to the top left grid area */
+  .img-top-l{
+      display:flex;
+      grid-area: img-top-l;
+  }
+  
+  /* assign the top right class to the top right grid area */
+  .img-top-r{
+      display:flex;
+      grid-area: img-top-r;
+  }
+  
+  /* assign the bottom left class to the bottom left grid area */
+  .img-bot-l{
+      display:flex;
+      grid-area: img-bot-l;
+  }
+  
+  /* assign the bottom right class to the bottom right grid area */
+  .img-bot-r{
+      display:flex;
+      grid-area: img-bot-r;
+  }
+  
+  /* style images that have the class of four-square with auto resizing and a border */
+img.four-square {
+    width: auto;
+    height: auto;
+    max-width: 90%;
+    min-width: 100px;
+    padding:5px;
+    margin:5px;
+    border-style:solid;
+    border-color:rgb(175,175,175) rgb(200,200,200);
+    background-color:black;
+    border-radius: 20px;
+}
+.centered {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+  }
+  
+  /* style the h2 in all displays */
+  h2 {
+      font-family: Garamond;
+      text-align: center;
+  } 
+  
+  /* style the footer in all displays */
+  footer{
+      text-align: left;
+      padding-left: 10px;
+      font-size: 1em;
+      font-family: Garamond;
+      background: rgba(194, 186, 182, 0.6);
+      background-blend-mode: darken;
+      background-size: cover;
+      margin:0px -10px 20px -10px;
+  }
+  
+  /* styles for the products table */ 
+  section table{ 
+      border: 2px solid black; 
+      border-collapse: collapse;
+      width:80%;
+  } 
+  
+  /* add a border to the cells in the products table */
+  section table td,th{ 
+      border: 1px solid rgb(175,175,175); 
+  }
+  
+  /* make every other row a different color in the products table */
+  section table tr:nth-child(even) { 
+      background-color: rgb(240,248,255); 
+  } 
+  
+  /* make the column containing the prices a different color */
+  section table col.price { 
+      background-color: rgb(255,255,224); 
+  }
+  
+  /* add the hover pseudoclass to the rows when they are hovered over */
+  section table tr:hover {
+      background-color: rgb(176,224,230);
+  } 
+  
+  /* modify the section and products table in it for all displays smaller than full screen */
+  @media print, screen and (max-width: 768px) {
+      section {
+          width: 100%;
+          text-align: center;
+      }
+  
+      section table {
+          margin: 10px auto 20px auto;
+      }
+  }
+  
+  /* style for the form background */
+  .light_blue_background{
+      background-color: rgb(240,248,255);
+  }
+  
+  /* style for the about us page */
+  section div.about_us {
+      border: 1px solid rgb(175,175,175);
+      padding: 10px; 
+      background-color: rgb(240,248,255);
+      border-radius:15px;
+      max-width:600px;
+  }
+  
+  section div p.bolder{
+      font-weight:bold;
+  }
+  /*section div.about_us {
+      margin: 5px, auto 5px auto;
+      border: 1px solid rgb(175,175,175);
+      padding: 10px; 
+      background-color: rgb(240,248,255);
+      border-radius:15px;
+      max-width:600px;
+  }*/
+
+.container {
+    display: grid;
+    align-items: start;
+    justify-content: center;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 5px;
+    border: 3px solid rgba(127, 123, 123, 0.8);
+    border-radius: 20px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    width: 90%;
+}
+   
+img {
+    max-width: 100%;
+    max-height:100%;
+    padding: 5px;
+    margin: 5px;
+    border-style: solid;
+    border-color: rgb(175, 175, 175) rgb(200, 200, 200);
+    background-color: black;
+    border-radius: 20px;
+}
+   
+.text {
+    padding-left: 30px;
+    font-size: 14px;
+}
+.container .text h1{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Garamond;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.container .text p{
+    font-size: 22px;
+    font-family: Garamond;
+    text-align: left;
+    margin-top: 10px;
+}
+  
+
+.abimg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    height: auto;
+  }
+
+.about{
+    font-size: 16px;
+    font-family: Garamond;
+    margin-left: 10px;
+}
+
+.textAbout {
+    padding-left: 30px;
+    font-size: 18px;
+}
